@@ -20,7 +20,7 @@ dotenv.config();
 app.use(
   cors(
     {
-      // origin: [process.env.FRONTEND_URL],
+      origin: [process.env.FRONTEND_URL],
       origin: 'https://blog-mern-prod.onrender.com',
       methods: ["GET", "PUT", "DELETE", "POST"],
       credentials: true,
@@ -28,7 +28,7 @@ app.use(
   )
 );
 
-app.use(cors());
+// app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
