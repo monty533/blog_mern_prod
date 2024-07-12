@@ -20,8 +20,7 @@ dotenv.config();
 app.use(
   cors(
     {
-      origin: [process.env.FRONTEND_URL],
-      origin: 'https://blog-mern-prod.onrender.com',
+      origin: ['https://blog-mern-prod.onrender.com', process.env.FRONTEND_URL],
       methods: ["GET", "PUT", "DELETE", "POST"],
       credentials: true,
     }
