@@ -25,7 +25,7 @@ app.use(cors({
 }));
 
 // Options request handling
-app.options('*', cors());
+// app.options('*', cors()); 
 
 app.use(cookieParser());
 app.use(express.json());
