@@ -54,7 +54,7 @@ app.use(errorMiddleware);
 app.use((req, res, next) => {
  res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://blog-mern-prod.onrender.com/"
+    "https://blog-mern-prod.onrender.com"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
