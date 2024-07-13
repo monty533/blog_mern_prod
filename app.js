@@ -17,21 +17,10 @@ const __dirname = path.dirname(__filename);
 const app = express();
 dotenv.config();
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', ['https://blog-mern-prod.onrender.com', process.env.FRONTEND_URL]);
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-//   if (req.method === 'OPTIONS') {
-//     return res.sendStatus(200);
-//   }
-//   next();
-// });
-
 app.use(
   cors(
     {
-      origin: ['https://blog-mern-prod.onrender.com', process.env.FRONTEND_URL],
+      origin: 'https://blog-mern-prod.onrender.com',
       methods: ["GET", "PUT", "DELETE", "POST"],
       credentials: true,
     }
